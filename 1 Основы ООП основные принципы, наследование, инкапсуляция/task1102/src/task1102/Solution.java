@@ -25,7 +25,7 @@ public class Solution {
 
     }
 
-    public class Dog {
+    public class Dog extends Pet{
 
     }
 }
