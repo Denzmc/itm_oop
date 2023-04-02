@@ -16,5 +16,9 @@ public class Solution {
 
     }
 
-    //Напишите тут ваши методы
+    void print(int i){}
+    void print(byte i){}
+    void print(char i){}
+    void print(String i){}
+    void print(boolean i){}
 }

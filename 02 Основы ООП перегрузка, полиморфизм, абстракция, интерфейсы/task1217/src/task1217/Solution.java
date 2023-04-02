@@ -19,6 +19,14 @@ public class Solution {
 
     }
 
-//add interfaces here - добавь интерфейсы тут
+    public interface CanFly{
+        void fly();
+    }
+    public interface CanRun{
+        void run();
+    }
+    public interface CanSwim{
+        void swim();
+    }
 
 }

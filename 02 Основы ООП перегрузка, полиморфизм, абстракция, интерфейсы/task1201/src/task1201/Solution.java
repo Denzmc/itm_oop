@@ -24,11 +24,9 @@ public class Solution {
 
     public static class Cow {
         public String getName() {
-            return "Я - корова";
+            return "Я -не корова, я - кит";
         }
     }
 
-    public static class Whale extends Cow {
-
-    }
+    public static class Whale extends Cow {}
 }

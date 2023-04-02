@@ -15,8 +15,16 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-
+        int a =5;
+        Integer b = 5;
+        print(a);
+        print(b);
     }
 
-    //Напишите тут ваши методы
+    static void print(int i){
+        System.out.println("int");
+    }
+    static void print(Integer i){
+        System.out.println("Integer");
+    }
 }

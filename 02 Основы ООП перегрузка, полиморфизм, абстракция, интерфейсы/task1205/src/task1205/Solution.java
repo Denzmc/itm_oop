@@ -22,7 +22,16 @@ public class Solution {
     }
 
     public static String getObjectType(Object o) {
-        //Напишите тут ваше решение
+        switch (o.getClass().getName()){
+            case "task1205.Solution$Cow": return "Cow";
+
+            case "task1205.Solution$Whale": return "Whale";
+
+            case "task1205.Solution$Pig": return "Pig";
+
+            case  "task1205.Solution$Dog":  return "Dog";
+
+        }
 
         return "Неизвестное животное";
     }

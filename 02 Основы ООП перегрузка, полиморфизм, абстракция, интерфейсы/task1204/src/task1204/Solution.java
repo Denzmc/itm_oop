@@ -23,10 +23,22 @@ public class Solution {
     }
 
     public static void printObjectType(Object o) {
-        //Напишите тут ваше решение
+        String s = "";
+        switch (o.getClass().getName()){
+            case "task1204.Solution$Cat": s="Cat";
+            break;
+            case "task1204.Solution$Bird": s= "Bird";
+            break;
+            case "task1204.Solution$Lamp": s="Lamp";
+            break;
+            case  "task1204.Solution$Dog":  s= "Dog";
+            break;
+        }
+        System.out.println(s);
     }
 
     public static class Cat {
+
     }
 
     public static class Dog {
