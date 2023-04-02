@@ -14,6 +14,8 @@ Requirements:
 6. Метод getMinimumMaximumPair не должен изменять массив inputArray.
  */
 
+import java.util.Arrays;
+
 public class Solution {
     public static void main(String[] args) {
         int[] data = new int[]{1, 2, 3, 5, -2, -8, 0, 77, 5, 5};
@@ -29,9 +31,10 @@ public class Solution {
             return new Pair(null, null);
         }
 
-        // напишите тут ваш код
+        Arrays.sort(inputArray);
 
-        return new Pair(0, 0);
+
+        return new Pair(inputArray[0], inputArray[inputArray.length-1]);
     }
 
     public static class Pair {

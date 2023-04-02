@@ -21,7 +21,7 @@ public class Solution {
 
     }
 
-    public class IPhone {
+    public class IPhone extends Apple {
 
     }
 }

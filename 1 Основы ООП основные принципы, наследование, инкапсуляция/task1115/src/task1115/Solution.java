@@ -23,15 +23,15 @@ public class Solution {
 
     }
 
-    public class Student {
+    public class Student extends  Schoolboy{
 
     }
 
-    public class Worker {
+    public class Worker extends Student{
 
     }
 
-    public class Retiree {
+    public class Retiree extends Worker{
 
     }
 

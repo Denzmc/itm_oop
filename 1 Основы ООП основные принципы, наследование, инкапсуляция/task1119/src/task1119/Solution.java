@@ -19,19 +19,19 @@ public class Solution {
     public static void main(String[] args) {
     }
 
-    public class House extends Cat {
+    public class House {
 
     }
 
-    public class Cat extends Car {
+    public class Cat {
 
     }
 
-    public class Car extends Dog {
+    public class Car {
 
     }
 
-    public class Dog extends House {
+    public class Dog {
 
     }
 }
