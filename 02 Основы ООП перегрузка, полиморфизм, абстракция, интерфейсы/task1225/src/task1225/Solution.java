@@ -22,6 +22,7 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
+        System.out.println(Tiger.class.getName());
         System.out.println(getObjectType(new Cat()));
         System.out.println(getObjectType(new Tiger()));
         System.out.println(getObjectType(new Lion()));
@@ -31,7 +32,14 @@ public class Solution {
     }
 
     public static String getObjectType(Object o) {
-        //напишите тут ваш код
+        String str = o.getClass().getName().substring(18);
+        switch (str){
+            case "Cat": return "Кот";
+            case "Tiger": return "Тигр";
+            case "Lion": return "Лев";
+            case "Bull": return "Бык";
+            case "Cow": return "Корова";
+        }
 
         return "Животное";
     }

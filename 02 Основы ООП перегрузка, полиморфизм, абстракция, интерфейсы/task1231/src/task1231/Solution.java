@@ -19,26 +19,28 @@ public class Solution {
     public static void main(String[] args) {
         Horse horse = new Pegasus();
         horse.run();
+        Pegasus pegasus = new Pegasus();
+        pegasus.fly();
     }
 
-    public static interface CanFly {
+    public interface CanFly {
         public abstract void fly();
     }
 
-    public static abstract class Horse {
+    public static class Horse {
         public void run() {
-
+            System.out.println("run");
         }
     }
 
     public static class Pegasus extends Horse implements CanFly {
-        public abstract void fly() {
-
+        public void fly() {
+            System.out.println("fly");
         }
     }
 
-    public static class SwimmingPegasus extends Pegasus {
-        public void swim();
+    public abstract static class SwimmingPegasus extends Pegasus {
+        public abstract void swim();
     }
 
 }

@@ -17,7 +17,7 @@ public class Solution {
         Pegasus horse = new Pegasus();
     }
 
-    public static interface CanFly {
+    public interface CanFly {
         public void fly();
     }
 
@@ -27,6 +27,10 @@ public class Solution {
         }
     }
 
-    public static class Pegasus {
+    public static class Pegasus extends Horse implements CanFly{
+        @Override
+        public void fly() {
+
+        }
     }
 }

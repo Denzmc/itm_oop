@@ -22,11 +22,17 @@ public class Solution {
         System.out.println(cto);
     }
 
-    public static interface Businessman {
+    public interface Businessman {
         public void workHard();
     }
+    public static class DopClass implements Businessman{
+        @Override
+        public void workHard() {
 
-    public static class CTO implements Businessman {
+        }
+    }
+
+    public static class CTO extends DopClass {
 
     }
 }

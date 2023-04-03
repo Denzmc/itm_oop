@@ -25,10 +25,16 @@ public class Solution {
         if (array == null || array.length == 0) {
             return new Pair<Integer, Integer>(null, null);
         }
+        int min = 0;
+        int index = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min ){
+                min = array[i];
+                index = i;
+            }
+        }
 
-        //напишите тут ваш код
-
-        return new Pair<Integer, Integer>(0, 0);
+        return new Pair<Integer, Integer>(min, index);
     }
 
     public static class Pair<X, Y> {
