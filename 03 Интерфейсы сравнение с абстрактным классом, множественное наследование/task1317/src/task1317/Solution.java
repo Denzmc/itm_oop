@@ -20,7 +20,7 @@ public class Solution {
         System.out.println(new Today(WeatherType.FREEZING));
     }
 
-    static class Today {
+    static class Today implements Weather{
         private String type;
 
         Today(String type) {
@@ -30,6 +30,11 @@ public class Solution {
         @Override
         public String toString() {
             return String.format("Today it will be %s", this.getWeatherType());
+        }
+
+        @Override
+        public String getWeatherType() {
+            return type;
         }
     }
 }

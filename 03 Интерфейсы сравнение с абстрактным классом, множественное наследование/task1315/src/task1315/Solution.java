@@ -36,4 +36,37 @@ public class Solution {
     public interface Eat {
         void eat();
     }
+    public static class Cat implements Movable, Edible, Eat{
+        @Override
+        public void move() {
+
+        }
+
+        @Override
+        public void beEaten() {
+
+        }
+
+        @Override
+        public void eat() {
+
+        }
+    }
+    public static class Dog implements Movable, Eat{
+        @Override
+        public void move() {
+
+        }
+
+        @Override
+        public void eat() {
+
+        }
+    }
+    public static class Mouse implements Movable{
+        @Override
+        public void move() {
+
+        }
+    }
 }

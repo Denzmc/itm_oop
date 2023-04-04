@@ -1,8 +1,6 @@
 package task1318;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Scanner;
 
 /* 
@@ -20,6 +18,21 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-        // напишите тут ваш код
+        try{
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String str = br.readLine();
+            InputStream is = new FileInputStream(str);
+
+            while (is.available() > 0) {
+                System.out.print((char) is.read());
+            }
+
+            System.out.println();
+            is.close();
+
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }

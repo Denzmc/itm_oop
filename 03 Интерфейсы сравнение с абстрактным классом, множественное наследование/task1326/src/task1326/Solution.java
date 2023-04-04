@@ -1,11 +1,7 @@
 package task1326;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 /* 
 Сортировка четных чисел из файла
@@ -38,8 +34,23 @@ Requirements:
 5. Программа должна закрывать поток чтения из файла — FileInputStream.*/
 
 public class Solution {
-    public static void main(String[] args) {
-        // напишите тут ваш код
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        String filePath = sc.nextLine();
 
+        FileInputStream fis = new FileInputStream(filePath);
+        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+        String line;
+        List<Integer> list = new ArrayList<>();
+        while ((line = br.readLine()) != null) {
+            list.add(Integer.parseInt(line));
+        }
+        list.sort(Comparator.naturalOrder());
+        for (int a: list) {
+            if (a%2 == 1) continue;
+            System.out.println(a);
+        }
+        fis.close();
     }
 }

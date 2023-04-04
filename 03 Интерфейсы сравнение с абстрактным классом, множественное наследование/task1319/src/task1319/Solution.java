@@ -1,9 +1,6 @@
 package task1319;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.InputStreamReader;
+import java.io.*;
 
 /* 
 Писатель в файл с консоли
@@ -23,6 +20,24 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-        // напишите тут ваш код
+        try{
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("File name");
+            String str = br.readLine();
+
+            System.out.println("Input text");
+            BufferedWriter bw = new BufferedWriter(new FileWriter(str));
+
+            String str2;
+            while (true) {
+                str2 = br.readLine();
+                if (str2.equals("exit")) break;
+                bw.write(str2+"\n");
+            }
+            br.close();
+            bw.close();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }
